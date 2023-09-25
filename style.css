@@ -15,7 +15,7 @@ h1, #filters {
 
 }
 
-#filters input, #filters #status-filters {
+#filters input, #filters #status-filter {
     padding: 8px 16px;
     margin: 10px;
     border: 1px solid transparent;
