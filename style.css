@@ -1,0 +1,26 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #060C1A;
+}
+
+h1 {
+    color: #58FFA4;
+}
+
+h1, #filters {
+    text-align: center;
+
+}
+
+#filters input, #filters #status-filters {
+    padding: 8px 16px;
+    margin: 10px;
+    border: 1px solid transparent;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #05232D;
+    color: #58FFA4;
+}
