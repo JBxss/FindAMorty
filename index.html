@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find A Morty</title>
 </head>
+
 <body>
-    
+    <h1>Find a Morty</h1>
+
+    <div id="filters">
+        <input type="text" id="name-filters" placeholder="Filtrado por Nombre">
+        <select id="status-filter">
+            <option value="">Filtrar por estado</option>
+            <option value="alive"></option>
+            <option value="dead"></option>
+            <option value="unknown"></option>
+        </select>
+    </div>
+
+    <div class="container">
+        <div id="characters"></div>
+    </div>
+    <script src="main.js"></script>
 </body>
+
 </html>
