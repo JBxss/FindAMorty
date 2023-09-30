@@ -1,26 +1,86 @@
+@font-face {
+    font-family: 'schwifty';
+    src: url('./assets/get_schwifty.ttf') format('truetype')
+}
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
     background-color: #060C1A;
+    background-image: url(./assets/bg.jpg);
 }
 
 h1 {
-    color: #58FFA4;
+    /* color: #58FFA4; */
+    color: white;
+    font-size: xxx-large;
+    margin-top: 50px;
+}
+
+h1,h2 {
+    font-family: "schwifty";
 }
 
 h1, #filters {
     text-align: center;
-
 }
 
 #filters input, #filters #status-filter {
     padding: 8px 16px;
     margin: 10px;
+    margin-top: 25px;
     border: 1px solid transparent;
     font-size: 18px;
     border-radius: 10px;
-    background-color: #05232D;
-    color: #58FFA4;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.character-card {
+    width: 200px;
+    margin: 15px;
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #2b2b2b;
+    padding: 27px;
+}
+
+.character-card img {
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+span {
+    color: gray;
+    font-size: small;
+}
+
+p {
+    margin: 5px;
+}
+
+.content-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

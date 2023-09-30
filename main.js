@@ -19,13 +19,17 @@ async function displayCharacters(name, status) {
     card.classList.add("character-card");
 
     card.innerHTML = `
+    <h2>${character.name}<h2/>
         <img src="${character.image}" />
-        <h2>${character.name}<h2/>
-        <p> Status: ${character.status}<p/>
-        <p>Especie: ${character.species}<p/>
+        <div class="content-card">
+        <p> <span>Estado</span> <br> ${character.status}<p/>
+        <p> <span>Especie</span> <br> ${character.species}<p/>
+        </div>
+        
         `;
-
+        
         characterElement.appendChild(card);
+        
   }
 }
 
