@@ -46,5 +46,9 @@ async function displayCharacters(name, status) {
 displayCharacters();
 
 nameFilterElement.addEventListener("input", () => {
-  displayCharacters(nameFilterElement.value);
+  displayCharacters(nameFilterElement.value, statusFilterElement.value);
+});
+
+statusFilterElement.addEventListener("change", () => {
+  displayCharacters(nameFilterElement.value, statusFilterElement.value);
 });
