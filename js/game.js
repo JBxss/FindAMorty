@@ -9,6 +9,15 @@ const createElement = (tag, className) => {
 let firstCard = "";
 let secondCard = "";
 
+const checkEndGame = () => {
+    const disableCards = document.querySelectorAll(".disableCard");
+    const AllCards = document.querySelectorAll(".card");
+
+    if (disableCards.length === AllCards.length) {
+        alert("Felicidades, eres el Ganador!");
+    }
+};
+
 const checkCards = () => {
   const firstCharacter = firstCard.getAttribute("data-character");
   const secondCharacter = secondCard.getAttribute("data-character");
@@ -19,6 +28,9 @@ const checkCards = () => {
 
     firstCard = "";
     secondCard = "";
+
+    checkEndGame();
+
   } else {
     setTimeout(() => {
       firstCard.classList.remove("revealCard");
