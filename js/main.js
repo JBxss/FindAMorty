@@ -52,3 +52,5 @@ nameFilterElement.addEventListener("input", () => {
 statusFilterElement.addEventListener("change", () => {
   displayCharacters(nameFilterElement.value, statusFilterElement.value);
 });
+
+export default getCharacters;
