@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'schwifty';
+    src: url('../assets/get_schwifty.ttf') format('truetype');
+}
+
 .login-form {
     align-items: center;
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: center;
+    background-image: url("../assets/bg.jpg");
 }
 
 .login__header {
@@ -19,12 +25,21 @@
 }
 
 .login__header h1 {
-    color: #333;
+    color: white;
     font-size: 1.5rem;
+    background-color: black;
+}
+
+.logo {
+    color: white;
+    font-family: "schwifty";
+    font-size: 5rem;
+    padding-bottom: 20px;
+    background-color: black;
 }
 
 .login__input {
-    border: 2px solid #333;
+    border: 2px solid gray;
     border-radius: 8px;
     color: #333;
     font-size: 1em;
@@ -36,13 +51,14 @@
 }
 
 .login__button {
-    background-color: greenyellow;
-    color: #36AEC7;
+    background-color: lawngreen;
+    color: black;
     border-radius: 8px;
     cursor: pointer;
     font-size: 1em;
     max-width: 300px;
     padding: 15px;
+    transition: all 400ms ease;
 }
 
 .login__button:disabled {
