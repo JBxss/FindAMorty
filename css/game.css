@@ -1,5 +1,28 @@
-body {
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background-image: url("../assets/bg.jpg");
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
+}
+
+span {
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(80, 80, 80, 0.8);
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+    border-radius: 5px;
 }
 
 .grid {
@@ -8,7 +31,7 @@ body {
     gap: 15px;
     width: 100%;
     max-width: 800px;
-    margin: 100px auto;
+    margin: 0px auto;
 }
 
 .card {
