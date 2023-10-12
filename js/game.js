@@ -12,12 +12,15 @@ let firstCard = "";
 let secondCard = "";
 
 const checkEndGame = () => {
-    const disableCards = document.querySelectorAll(".disableCard");
-    const AllCards = document.querySelectorAll(".card");
+  const disableCards = document.querySelectorAll(".disableCard");
+  const AllCards = document.querySelectorAll(".card");
 
-    if (disableCards.length === AllCards.length) {
-        alert("Felicidades, eres el Ganador!");
-    }
+  if (disableCards.length === AllCards.length) {
+    clearInterval(timerInterval);
+    alert(
+      `Felicidades ${spanPlayer.innerHTML}, su tiempo fue de ${timer.innerHTML}seg`
+    );
+  }
 };
 
 const checkCards = () => {
@@ -32,7 +35,6 @@ const checkCards = () => {
     secondCard = "";
 
     checkEndGame();
-
   } else {
     setTimeout(() => {
       firstCard.classList.remove("revealCard");
@@ -81,7 +83,7 @@ const loadGame = async () => {
 
   const response = await fetch(url);
   const data = await response.json();
-  const characters = data.results;
+  const characters = data.results.slice(0, 10);
   const duplicateCharacters = [...characters, ...characters];
   const suffledArray = duplicateCharacters.sort(() => Math.random() - 0.5);
 
@@ -91,16 +93,17 @@ const loadGame = async () => {
   }
 };
 
+let timerInterval;
+
 const startTimer = () => {
-  setInterval(() => {
+  timerInterval = setInterval(() => {
     const currentTime = +timer.innerHTML;
     timer.innerHTML = currentTime + 1;
-  }, 1000)
-}
+  }, 1000);
+};
 
 window.onload = () => {
   spanPlayer.innerHTML = localStorage.getItem("player");
   startTimer();
   loadGame();
-}
-
+};
