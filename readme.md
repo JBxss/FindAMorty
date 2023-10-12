@@ -2,7 +2,11 @@
 
 Este es un proyecto web que utiliza HTML, CSS y JavaScript para consumir datos de la API de Rick y Morty y crear un juego de memoria con cartas de personajes de la serie. Los jugadores pueden poner a prueba su memoria emparejando personajes mientras disfrutan de la temática de Rick y Morty.
 
-![Rick y Morty Memory Game](link_a_la_imagen.png)
+![Rick y Morty Memory Game](./assets/game.png)
+*Página del Juego de Memoria*
+
+![Rick y Morty Memory Game](./assets/search.png)
+*Página del Buscador de Personajes*
 
 ## Características
 
@@ -32,15 +36,16 @@ git clone https://github.com/jbxss/findAMorty
 
 ## Configuración de la API
 
-Para personalizar qué personajes se muestran en el juego, puedes modificar la configuración de la API en el archivo `config.js`. Puedes ajustar el número de personajes y las características que deseas incluir.
+Para personalizar qué personajes se muestran en el juego, puedes modificar la configuración de la API en el archivo `game.js`. Puedes ajustar el número de personajes y las características que deseas incluir.
 
 ```javascript
-// config.js
+// game.js
 
-const API_CONFIG = {
-  API_URL: 'https://rickandmortyapi.com/api/character',
-  NUM_CHARACTERS: 10, // Cambia este número según tus preferencias
-};
+const loadGame = async () => {
+  let url = "https://rickandmortyapi.com/api/character";
+  const characters = data.results.slice(0, 10); // Cambia este número según tus preferencias
+}
+
 ```
 
 ## Contribuir
