@@ -1,5 +1,6 @@
 const grid = document.querySelector(".grid");
 const spanPlayer = document.querySelector(".player");
+const timer = document.querySelector(".timer");
 
 const createElement = (tag, className) => {
   const element = document.createElement(tag);
@@ -90,9 +91,16 @@ const loadGame = async () => {
   }
 };
 
+const startTimer = () => {
+  setInterval(() => {
+    const currentTime = +timer.innerHTML;
+    timer.innerHTML = currentTime + 1;
+  }, 1000)
+}
+
 window.onload = () => {
   spanPlayer.innerHTML = localStorage.getItem("player");
-
+  startTimer();
   loadGame();
 }
 
