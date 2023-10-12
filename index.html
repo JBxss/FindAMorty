@@ -5,28 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find A Morty</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
     <h1>Find a Morty</h1>
-
-    <div id="filters">
-        <input type="text" id="name-filter" placeholder="Filtrado por Nombre">
-        <select id="status-filter">
-            <option value="">Filtrar por estado</option>
-            <option value="alive">Vivo</option>
-            <option value="dead">Muerto</option>
-            <option value="unknown">Desconocido</option>
-        </select>
-    </div>
-
+    <h3>Decide si quieres ejercitar tu mente o explorar personajes</h3>
     <div class="container">
         <div id="characters">
-            <!-- Display Personajes -->
+            <div class="character-card">
+                <h2>Busca un Personaje</h2>
+                <img src="./assets/search.png">
+                <h4>Encuentra tus personajes favoritos de Rick y Morty</h4>
+                <a href="./pages/search.html"><i class="fa-solid fa-arrow-right"></i>
+                    
+                </a>
+            </div>
+
+            <div class="character-card">
+                <h2>Juego de Memoria</h2>
+                <img src="./assets/game.png">
+                <h4>Un divertido desafío de memoria con los personajes de Rick y Morty.</h4>
+                <a href="./pages/login.html"><i class="fa-solid fa-arrow-right"></i></a>
+                
+            </div>
         </div>
     </div>
-    <script src="./js/main.js"></script>
+    <script src="https://kit.fontawesome.com/68c7342c84.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

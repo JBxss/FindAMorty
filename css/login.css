@@ -3,13 +3,16 @@
     src: url('../assets/get_schwifty.ttf') format('truetype');
 }
 
+body {
+    background-image: url("../assets/bg.jpg");
+}
+
 .login-form {
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 80vh;
     justify-content: center;
-    background-image: url("../assets/bg.jpg");
 }
 
 .login__header {
@@ -65,4 +68,14 @@
     background-color: #eee;
     color: #aaa;
     cursor: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 25px;
+    display: inline-block;
 }
