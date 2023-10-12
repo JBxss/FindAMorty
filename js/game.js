@@ -1,4 +1,5 @@
 const grid = document.querySelector(".grid");
+const spanPlayer = document.querySelector(".player");
 
 const createElement = (tag, className) => {
   const element = document.createElement(tag);
@@ -89,4 +90,9 @@ const loadGame = async () => {
   }
 };
 
-loadGame();
+window.onload = () => {
+  spanPlayer.innerHTML = localStorage.getItem("player");
+
+  loadGame();
+}
+
